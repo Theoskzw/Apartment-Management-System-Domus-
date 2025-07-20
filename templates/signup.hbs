@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Domus</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: url('https://dwarkaexpressway-bucket.s3.ap-south-1.amazonaws.com/images/96cc729e3ef70b074a6bd3a1c4b4d8.png') no-repeat center center/cover;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .nav-bar {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: #AC73D6;
+    }
+
+    .logo span {
+      color: #a0d6b4;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 50px;
+      margin-right: 50px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #AC73D6;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #8b5fbf;
+    }
+
+    .registration-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .register-btn {
+      background-color: #AC73D6;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .register-btn:hover {
+      background-color: #8b5fbf;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <div class="logo">DOM<span>US</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="registration-container">
+    <h2>Register</h2>
+    <form action="/signup" method="POST">
+      <input type="text" name="firstname" placeholder="First Name" required>
+      <input type="text" name="lastname" placeholder="Last Name" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="flatno" placeholder="Flat No." required>
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+  </div>
+</body>
+</html>

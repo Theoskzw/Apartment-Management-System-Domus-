@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domus - Dream Residence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+  
+    .navbar {
+      background-color: #ffffff;
+      padding: 20px 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: #AC73D6;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo span {
+      color: #a0d6b4;
+      margin-left: 5px;
+    }
+
+    .navbar a {
+      color: #808080;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #AC73D6;
+    }
+
+    .navbar .login-btn {
+      background-color: #a0d6b4;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+    }
+
+    .navbar .login-btn:hover {
+      background-color: #AC73D6;
+    }
+
+    
+    .hero {
+      background: url('https://www.yhataw.com/wp-content/uploads/2020/12/HeroHomes-02-900x600.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      z-index: 2;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 30px;
+      z-index: 2;
+    }
+
+    .hero .h-buttons {
+      display: flex;
+      gap: 25px;
+      z-index: 2;
+    }
+
+    .h-buttons button {
+      background-color: #ffffff;
+      color: #AC73D6;
+      border: none;
+      padding: 15px 35px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .h-buttons button:hover {
+      background-color: #AC73D6;
+      color: white;
+    }
+
+    
+    .about-section {
+      padding: 80px 40px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 40px;
+      color: #36454F;
+      margin-bottom: 30px;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      color: #808080;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 80px 40px;
+      background-color: #f5f5f5;
+    }
+
+    .feature {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature h3 {
+      font-size: 24px;
+      color: #AC73D6;
+      margin-bottom: 20px;
+    }
+
+    .feature p {
+      font-size: 16px;
+      color: #808080;
+    }
+
+    
+    footer {
+      background-color: #36454F;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      DOM<span>US</span>
+    </div>
+    <div>
+      <a href="newhomepg.html">Home</a>
+      <a href="#property">Property</a>
+      <a href="about.html">About</a>
+
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="#signin">Sign in</a>
+      <a href="/login" class="login-btn" name="loginpage">Login</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Smart Living, Simplified</h1>
+    <p>Explore our range of apartment management services designed for seamless living.</p>
+    <div class="h-buttons">
+      <button onclick="location.href='complaint.html'">📢 Register Complaint</button>
+<button onclick="location.href='notice.html'">📨 View Notices</button>
+
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About DOMUS</h2>
+    <p>An innovative Apartment Management System designed to simplify the complex process of managing residential properties. DOMUS ensures smooth communication, efficient maintenance, and streamlined financial processes for a hassle-free living experience.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Resident Management</h3>
+      <p>Effortlessly manage tenant details, streamline rent payments, and simplify tenant onboarding.</p>
+    </div>
+    <div class="feature">
+      <h3>Maintenance & Service Requests</h3>
+      <p>Allow residents to submit maintenance requests, track progress, and assign tasks to staff.</p>
+    </div>
+    <div class="feature">
+      <h3>Communication & Notifications</h3>
+      <p>Instantly share important updates with residents, facilitating clear and quick communication.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Domus. All rights reserved.</p>
+  </footer>
+</body>
+</html>
